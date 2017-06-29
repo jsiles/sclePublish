@@ -1,0 +1,20 @@
+ErrorDocument 500 "<html><head><title>Error 500</title></head><body>Error del sistema 500</body></html>" 
+RewriteEngine On
+Options +FollowSymlinks -Indexes
+Options -ExecCGI
+RewriteRule ^404/$ ./index.php?cod404=y [L]
+RewriteRule ^(.+)/$ ./contentView.php?uid=$1 [L]
+#RewriteCond %{HTTPS} off
+#RewriteRule (.*) https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
+<Files ".ht*">
+deny from all
+</Files>
+<filesMatch "\.(js|js?version=1.2|css)$">
+  FileETag None
+  <ifModule mod_headers.c>
+     Header unset ETag
+     Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+     Header set Pragma "no-cache"
+     Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT"
+  </ifModule>
+</filesMatch>

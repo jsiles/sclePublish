@@ -1,0 +1,6 @@
+ErrorDocument 500 "<html><head><title>Error 500</title></head><body>Error del sistema 500</body></html>" 
+RewriteEngine On
+Options +FollowSymlinks -Indexes
+<Files "admin.php">
+deny from all
+</Files>
