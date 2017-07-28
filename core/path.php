@@ -33,7 +33,7 @@ $rootsystem = $_SERVER['DOCUMENT_ROOT'] . $xpath;
 
 define("PATH_DOMAIN",	$domain);
 define("PATH_ROOT"	,$rootsystem);				// RUTA PRINCIPAL DEL SITIO
-define("PATH_PUBLIC", 	"F:\desa\scle"); 		// DONDE SE SUBEN ARCHIVOS
+define("PATH_PUBLIC", 	"c:\desa\scle"); 		// DONDE SE SUBEN ARCHIVOS
 
 define("PATH_LOG"	, 	PATH_ROOT . "/log");		// ARCHIVO DE ERRORES
 define("DEBUG"		,	true);

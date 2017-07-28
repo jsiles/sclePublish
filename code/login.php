@@ -4,6 +4,8 @@ $code=  urlencode(SymmetricCrypt::Encrypt($code));
 admin::setSession("code", $code);
 $lockedAccount=admin::getSession("LOCK_IP");
 //echo "SSS".$lockedAccount;
+$sUidClient=admin::getSession("uidClient");
+if(isset($sUidClient)) header("Location:". $domain."/categorias/");
 ?>
 <script language="javascript" type="text/javascript">
 function onSubmit(){

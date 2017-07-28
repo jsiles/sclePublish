@@ -67,24 +67,29 @@
         
         <a href="<?=$domain?>/code/bidsPrecio.php?sub_uid=<?=$xitem["xit_sub_uid"]?>&ofert=<?=$valBids?>&uid=<?=$xitem["xit_uid"]?>" id="planCuentas_<?= $xitem["xit_uid"] ?>" rel="facebox" class="addcart">Aceptar</a> (Ingrese su oferta)
         
-        </div>
-      
-	  <!--<p class="unidadmejora"><label class="bold">Unidad de Mejora:</label> <?=$moneda?> <?=$xitem["xit_unity"]?></p>-->
-                                
-           <input type="hidden" name="hOk_<?=$xitem["xit_uid"]?>" id="hOk_<?=$xitem["xit_uid"]?>" value="" />
+        
+              <input type="hidden" name="hOk_<?=$xitem["xit_uid"]?>" id="hOk_<?=$xitem["xit_uid"]?>" value="" />
            <input type="hidden" name="cli_uid_<?=$xitem["xit_uid"]?>" id="cli_uid_<?=$xitem["xit_uid"]?>" value="<?=$cli_uid?>" />
             <input type="hidden" name="domain_<?=$xitem["xit_uid"]?>" id="domain_<?=$xitem["xit_uid"]?>" value="<?=$domain?>" />
             <input type="hidden" name="uid_<?=$xitem["xit_uid"]?>" id="uid_<?=$xitem["xit_uid"]?>" value="<?=$xitem["xit_uid"]?>" />
             <input type="hidden" name="sub_uid_<?=$xitem["xit_uid"]?>" id="sub_uid_<?=$xitem["xit_uid"]?>" value="<?=$xitem["xit_sub_uid"]?>" />
             <input type="hidden" name="round_<?=$xitem["xit_uid"]?>" id="round_<?=$xitem["xit_uid"]?>" value="<?=$wheel?>" />
+        </div>
+      <!--<p class="unidadmejora"><label class="bold">Unidad de Mejora:</label> <?=$moneda?> <?=$xitem["xit_unity"]?></p>-->
+                                
+      --------------Oferta QWERTY
 </form>
                     </div>
                     
                     
                     								</div>
+                                       
                      <div class="content">
                      <?=$xitem["xit_description"]?><br /><br />
                      </div>
+                                        
+                            --------------Oferta QWERTY2
+                            
                                                     
 					<?php
 					}
