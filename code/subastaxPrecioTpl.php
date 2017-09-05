@@ -76,8 +76,7 @@
             <input type="hidden" name="round_<?=$xitem["xit_uid"]?>" id="round_<?=$xitem["xit_uid"]?>" value="<?=$wheel?>" />
         </div>
       <!--<p class="unidadmejora"><label class="bold">Unidad de Mejora:</label> <?=$moneda?> <?=$xitem["xit_unity"]?></p>-->
-                                
-      --------------Oferta QWERTY
+
 </form>
                     </div>
                     
@@ -87,10 +86,7 @@
                      <div class="content">
                      <?=$xitem["xit_description"]?><br /><br />
                      </div>
-                                        
-                            --------------Oferta QWERTY2
-                            
-                                                    
+                                                
 					<?php
 					}
 					?>
