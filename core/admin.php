@@ -838,7 +838,7 @@ class admin{
 		$param_value = "";
 		if(isset($_SESSION[$param_name])) $param_value = $_SESSION[$param_name];
 		//$param_value = rtrim(SymmetricCrypt::Decrypt($_SESSION[$param_name]));
-		else $param_value="";
+		else unset($param_value);//="";
 		return $param_value;
 		
 		}
