@@ -159,7 +159,8 @@ span, label, p, td, h2 {
 #logo {
 	position: relative;
 	float: left;
-	width: 10%;
+	width: 20%;
+	height: 50px;
 }
 
 #logo h1, #logo p {
@@ -184,19 +185,30 @@ span, label, p, td, h2 {
 	float: left;
 	width: 100%;
 	height: 150px;
-        padding-top: 20px 10px 0px 10px;
 }
 
 #top-banner #colA {
-	float: center;
-        text-align: center;
-	width: 90%;
+	float: right;
+	width: 75%;
+	height:150px;
+	alignment-adjust:central;
+	
 }
 
 #top-banner #colA h2 {
 	margin: 0px;
-	padding: 40px 0px 0px 0px;
+	padding: 40px 0px 0px 0px 0px;
 	letter-spacing: -1px;
+	font-size: 19px;
+	font-weight: bold;
+	color: #3E3E3E;
+}
+
+#top-banner #colA .byline {
+	margin: 0px;
+	padding: 0px 0px 14px 0px;
+	font-size: 12px;
+	color: #929292;
 }
 
 #top-banner #colA .link {
@@ -207,14 +219,15 @@ span, label, p, td, h2 {
 
 #top-banner #colB {
 	float: right;
-	width: 7%;
+	width: 20%;
 	text-align: center;
 	color: #696969;
 }
 
 
 #top-banner #colB p {
-	
+	float: right;
+	width:50px;
 }
 
 #top-banner #colB p a {
@@ -222,11 +235,9 @@ span, label, p, td, h2 {
 	height:13px;
 	width:13px;
 	background:url(../lib/close.gif) no-repeat left top; 
-        padding-top: 50px;
-	
 }
 
-/*#top-banner #colB .viewcart {
+#top-banner #colB .viewcart {
 	display: inline-block;
 	width: 118px;
 	height: 25px;
@@ -236,7 +247,7 @@ span, label, p, td, h2 {
 	text-decoration: none;
 	font-weight: bold;
 	color: #FFFFFF;
-}*/
+}
 
 #changes {
 	text-align: center;
@@ -453,7 +464,7 @@ span, label, p, td, h2 {
 /** BOX5, BOX7 */
 
 #box5 .content, #box7 .content {
-	padding-top: 0px;
+	padding-top: 10px;
 }
 
 #box5 .content p, #box7 .content {
@@ -537,7 +548,7 @@ span, label, p, td, h2 {
 	overflow: hidden;
 	width: 380px;
 	margin-bottom: 3px;
-	padding: 0px 25px 5px 25px;
+	padding: 0px 25px 20px 25px;
 	border-radius: 5px;
 	background-color:#eee;
 }
@@ -551,7 +562,6 @@ span, label, p, td, h2 {
 	width: 640px;
 	margin-bottom: 0px;
 	background: none;
-        border-color:#666;
 }
 
 .item-box p {
@@ -666,8 +676,8 @@ color:#000;/*dd2d26; style="width:500px;margin-top:9px;margin-left:4px;height:25
 .formLabel .addcart
 {
 	border-radius:5px;
-	background-color:#16652f;
-color:#fff;
+	background-color:#ddd;
+color:#000;
 display:inline-block;
 font-weight:bold;
 height:25px;
@@ -696,8 +706,10 @@ font-size:12px;
 font-weight:bold;
 color:#dd2d26;	
 }
+
 .defCountDown1
 {
+/*width:500px;margin-top:9px;margin-left:4px;height:25px;font-size:12px;font-weight:bold;color:#dd2d26*/	
 width:500px;
 margin-top:9px;
 margin-left:4px;
@@ -707,7 +719,6 @@ font-weight:bold;
 color:#dd2d26;	
 }
 
-
-#subastaP{
+.subastaP{
 width:750px;
 }
