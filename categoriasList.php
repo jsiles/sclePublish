@@ -1,9 +1,7 @@
 <?php
-//echo 3;die;
-include_once("core/admin.php");
+include_once("admin/core/admin.php");
 //@session_start();
 admin::initializeClient();
-//echo 1;die;
 $uidClient = admin::getSession("uidClient");
 $arrayURL = admin::urlArray();
 if($arrayURL[$urlPositionTitle]!='divisas')
