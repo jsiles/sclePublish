@@ -13,7 +13,8 @@ admin/upload/sites/*
 admin/upload/profile/*
 admin/upload/oc/*
 docs/subasta/*
-
+*.cfg
+*.log
 #################
 ## Eclipse
 #################
