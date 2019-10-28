@@ -85,11 +85,68 @@
                                        
                      <div class="content">
                      <?=$xitem["xit_description"]?><br /><br />
-                     </div>
-                                                
+                    
+                                            
+                                        <?php
+                                        //nuevo se despliega la oferta
+                                    /*    SELECT [bid_cli_uid]
+      ,[bid_mount]
+      ,[bid_mountxfac]
+      ,[bid_date]
+      ,[bid_xit_uid]
+      ,[bid_doc]
+  FROM [subasta].[dbo].[mdl_biditem]
+*/
+                                        $sSQL ="select bid_mount, bid_mountxfac, bid_date, bid_doc from mdl_biditem where bid_sub_uid= ".$details["sub_uid"]." and bid_xit_uid=".$xitem["xit_uid"]." and bid_cli_uid=".admin::getSession("uidClient");
+					$db3->query($sSQL);
+                                        while($oferta=$db3->next_record()){
+                                        ?>
+                                          <table width="100%" border="0">
+       
+                
+                                            <tr>
+                                                                <td width="25%" class="bold">Fecha y hora:</td>
+                                                                <td width="25%" class="bold">Monto:</td>
+                                                              <?php
+                                                               if($factor>0){
+                                                              ?>
+                                                                <td width="25%" class="bold">Monto con factor de ajuste:</td>
+                                                               <?php }
+                                                               ?>
+                                                                <td width="25%" class="bold">Documento Oferta:</td>
+                                            </tr>  
+                                            <tr>
+                                                <td width="25%" style="font-size: 10px;font-family: arial"><?=$oferta["bid_date"]?></td>
+                                                                <td width="25%" style="font-size: 10px;font-family: arial"><?=admin::numberFormat($oferta["bid_mount"])?></td>
+                                                                <?php
+                                                               if($factor>0){
+                                                              ?>
+                                                                <td width="25%" style="font-size: 10px;font-family: arial"><?=admin::numberFormat($oferta["bid_mountxfac"])?></td>
+                                                               <?php } ?>
+                                                                <td width="25%" style="font-size: 10px;font-family: arial"><?php
+                                if(file_exists(PATH_ROOT."/docs/subasta/".$oferta["bid_doc"])){
+                                    
+                                   ?>
+                                    <a href="<?=PATH_DOMAIN."/docs/subasta/".$oferta["bid_doc"]?>" target="blank"><img src="<?=PATH_DOMAIN."/lib/ext/doc-txt.png"?>" border="0" /></a>
+                                    <?php
+                                    
+                                }else{
+                                    ?>&nbsp;
+                                    <?php
+                                    
+                                }
+                                ?></td>
+                                            </tr>  
+
+                                        </table>
 					<?php
+                                        }
+                                        ?>
+                                        </div>                                         
+                                           <?php
 					}
 					?>
+                      
                     <!-- info de productos -->
                     <div class="content">
                     <?php

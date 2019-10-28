@@ -61,6 +61,9 @@ function bidsLoad()
                         document.getElementById('ct_value_'+<?=$xit_uid?>).value='';
 			 setTimeout(function () {
                             $.facebox.close();},2000);
+                        
+                        setTimeout(function () {location.reload();},2200);
+                        
 			}
 		 });        
 	//$.facebox.close();		

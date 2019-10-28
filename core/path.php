@@ -14,12 +14,12 @@ define("DBUSER",	$user);
 define("DBPASSWORD",$pass);
 // for sever
 
-	$xpath = "";
+	$xpath = "/sclePublish";
 	$urlLanguage=1;
-	$urlPositionTitle	=	0;
-	$urlPositionSubtitle=	1;
-	$urlPositionSubtitle2=	2;
-	$urlPositionSubtitle3=	3;
+	$urlPositionTitle	=	1;
+	$urlPositionSubtitle=	2;
+	$urlPositionSubtitle2=	3;
+	$urlPositionSubtitle3=	4;
 
 if($_SERVER['SERVER_PORT']==443){
 $domain = "https://" . $_SERVER['HTTP_HOST'].$xpath;
