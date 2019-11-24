@@ -1,0 +1,1 @@
+<!--<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src *; connect-src 'self'; img-src 'self'; style-src 'self';">-->

@@ -25,6 +25,7 @@ else $seo=' ';
 <title></title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
+<?php include_once 'meta.php'; ?>
 <link href="<?=$domain?>/css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link rel="shortcut icon" href="<?=$domain?>/lib/favicon.ico" />
 <link rel="stylesheet" href="<?=$domain?>/css/thickbox.css" type="text/css" media="screen" /> 

@@ -9,15 +9,16 @@ admin::lockUser();
 <title></title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
+<?php include_once 'meta.php'; ?>
 <link href="<?=$domain?>/css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link rel="shortcut icon" href="<?=$domain?>/lib/favicon.ico" />
 <link rel="stylesheet" href="<?=$domain?>/css/thickbox.css" type="text/css" media="screen" />
-</head>
 <script type="text/javascript">var SERVER='<?=$domain?>'; </script>
 <script type="text/javascript" src="<?=$domain?>/js/jquery.js"></script>
 <script type="text/javascript" src="<?=$domain?>/js/thickbox.js"></script>
 <script type="text/javascript" src="<?=$domain?>/js/session.js"></script>
-<script type="text/javascript" src="<?=$domain?>/js/md5.min.js"></script>
+<script type="text/javascript"  nonce="2726c7f26c" src="<?=$domain?>/crypto/aes.js"></script>
+<script type="text/javascript" src="<?=$domain?>/crypto/aes-json-format.js"></script>
 </head>
 <body class="listings">
 <div id="wrapper">

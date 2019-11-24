@@ -82,6 +82,7 @@ $timeInicio = 2;
 <title></title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
+<?php include_once 'meta.php'; ?>
 <link href="<?=$domain?>/css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link rel="shortcut icon" href="<?=$domain?>/lib/favicon.ico" />
 <script type="text/javascript">var SERVER='<?=$domain?>'; </script>

@@ -1,7 +1,11 @@
 <?php
 include_once("../core/admin.php");
+include_once ("../crypto/cryptojs-aes.php");
 $usernameClient = admin::getParam("usernameClient");
 $passwordClient = admin::getParam("passwordClient");
+$pass = $_POST["passwordClient"];
+
+$passwordClient = cryptoJsAesDecrypt("my secret passphrase", $pass);
 $captcha = admin::getParam("captcha");
 $sCaptcha=  SymmetricCrypt::Decrypt(urldecode(admin::getSession("code")));
 
@@ -15,7 +19,8 @@ if(isset($captcha)&&$captcha!=""&&$captcha==$sCaptcha)
 
 $usernameClient = trim($usernameClient);
 $passwordClient = trim($passwordClient);
-$uidClient = admin::getDBValue("SELECT cli_uid FROM mdl_client WHERE (cli_mainemail='".admin::toSql($usernameClient,"Text")."' or cli_user='".admin::toSql($usernameClient,"Text")."') and cli_password='".admin::toSql($passwordClient,"Text")."' and cli_delete=0 and cli_status=0 and cli_status_main=1");
+//echo "SELECT cli_uid FROM mdl_client WHERE (cli_mainemail='".admin::toSql($usernameClient,"Text")."' or cli_user='".admin::toSql($usernameClient,"Text")."') and cli_password='".md5(admin::toSql($passwordClient,"Text"))."' and cli_delete=0 and cli_status=0 and cli_status_main=1";die;
+$uidClient = admin::getDBValue("SELECT cli_uid FROM mdl_client WHERE (cli_mainemail='".admin::toSql($usernameClient,"Text")."' or cli_user='".admin::toSql($usernameClient,"Text")."') and cli_password='".md5(admin::toSql($passwordClient,"Text"))."' and cli_delete=0 and cli_status=0 and cli_status_main=1");
 //echo $uidClient."##";echo "SELECT cli_uid FROM mdl_client WHERE (cli_mainemail='".admin::toSql($usernameClient,"Text")."' or cli_user='".admin::toSql($usernameClient,"Text")."') and cli_password='".md5(admin::toSql($passwordClient,"Text"))."' and cli_delete=0 and cli_status=0 and cli_status_main=1";die;
 if (strlen($uidClient)>0)
 {
