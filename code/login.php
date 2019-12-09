@@ -10,7 +10,7 @@ if(isset($sUidClient)) header("Location:". $domain."/categorias/");
 <script language="javascript" type="text/javascript">
 function onSubmit(){
     var sena = document.getElementById("passwordClient").value;
-    document.getElementById("passwordClient").value= CryptoJS.AES.encrypt(JSON.stringify(sena),'my secret passphrase', {format: CryptoJSAesJson}).toString();
+    document.getElementById("passwordClient").value= djs(devzoneFunc(sena));
     document.formLabel.submit();
 }
 </script>

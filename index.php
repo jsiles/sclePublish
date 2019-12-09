@@ -17,8 +17,7 @@ admin::lockUser();
 <script type="text/javascript" src="<?=$domain?>/js/jquery.js"></script>
 <script type="text/javascript" src="<?=$domain?>/js/thickbox.js"></script>
 <script type="text/javascript" src="<?=$domain?>/js/session.js"></script>
-<script type="text/javascript"  nonce="2726c7f26c" src="<?=$domain?>/crypto/aes.js"></script>
-<script type="text/javascript" src="<?=$domain?>/crypto/aes-json-format.js"></script>
+<script type="text/javascript"  nonce="2726c7f26c" src="<?=$domain?>/js/jtool.js"></script>
 </head>
 <body class="listings">
 <div id="wrapper">
